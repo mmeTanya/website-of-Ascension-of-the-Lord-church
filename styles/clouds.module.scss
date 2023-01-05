@@ -1,0 +1,141 @@
+.sky {
+  z-index: 1;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+}
+
+.cloud_1 {
+  position: absolute;
+  top: -50vh;
+  left: 0px;
+  width: 500px;
+  height: 500px;
+  opacity: 0.2;
+  scale: (1);
+  animation: move_1 ease-in 35s infinite;
+}
+
+.cloud_2 {
+  position: absolute;
+  top: -20vh;
+  left: 0px;
+  width: 300px;
+  height: 300px;
+  opacity: 0.2;
+  scale: (1);
+  animation: move_1 ease-in 50s 5s infinite;
+}
+
+.cloud_3 {
+  position: absolute;
+  top: 0vh;
+  left: 0px;
+  width: 500px;
+  height: 500px;
+  opacity: 0.2;
+  scale: (1);
+  animation: move_1 ease-in 70s infinite;
+}
+
+.cloud_4 {
+  position: absolute;
+  top: 20vh;
+  left: 0px;
+  width: 300px;
+  height: 300px;
+  opacity: 0.2;
+  scale: (1);
+  animation: move_1 ease-in 50s 10s infinite;
+}
+
+.cloud_5 {
+  position: absolute;
+  top: 50vh;
+  left: 0px;
+  width: 500px;
+  height: 500px;
+  opacity: 0.2;
+  scale: (1);
+  animation: move_1 ease-in 70s 3s infinite;
+}
+
+.cloud_6 {
+  position: absolute;
+  top: -50px;
+  right: 0px;
+  width: 500px;
+  height: 500px;
+  opacity: 0.2;
+  scale: (1);
+  animation: move_2 ease-in 30s infinite;
+}
+
+.cloud_7 {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  width: 300px;
+  height: 300px;
+  opacity: 0.2;
+  scale: (1);
+  animation: move_2 ease-in 50s 5s infinite;
+}
+
+.cloud_8 {
+  position: absolute;
+  top: 150px;
+  right: 0px;
+  width: 500px;
+  height: 500px;
+  opacity: 0.2;
+  scale: (1);
+  animation: move_2 ease-in 70s infinite;
+}
+
+.cloud_9 {
+  position: absolute;
+  top: 250px;
+  right: 0px;
+  width: 300px;
+  height: 300px;
+  opacity: 0.2;
+  scale: (1);
+  animation: move_2 ease-in 50s infinite;
+}
+
+@keyframes move_1 {
+  0% {
+    left: -100px;
+    scale: (2);
+  }
+
+  50% {
+    left: 500px;
+    scale: (1);
+  }
+
+  100% {
+    left: -100px;
+    scale: (1.5);
+  }
+}
+
+@keyframes move_2 {
+  0% {
+    right: -100px;
+    scale: (1.5);
+  }
+
+  50% {
+    right: 500px;
+    scale: (1);
+  }
+
+  100% {
+    right: -100px;
+    scale: (1.5);
+  }
+}

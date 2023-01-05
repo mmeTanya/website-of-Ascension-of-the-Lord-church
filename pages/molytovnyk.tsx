@@ -1,32 +1,24 @@
 import type { NextPage } from 'next'
-import { useMediaQuery } from "react-responsive";
 import Head from 'next/head'
 import Header from '../components/header'
 import Clouds from '../components/clouds'
-import Hero from '../components/hero'
-import News from '../components/news'
+import Molytvy from '../components/molytvy'
 import Footer from '../components/footer'
 
-
-
-const Home: NextPage = () => {
-
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+const Molytovnyk: NextPage = () => {
 
   return (
     <div className='overlay' >
       <Clouds />
       <Head>
-      <title>Свято-Вознесенська парафія</title>
+        <title>Свято-Вознесенська парафія</title>
         <meta name="description" content="Свято-Вознесенська парафія, Українська православна церква Київського Патріархату" />
         <link rel="icon" href="/Ukrainian_Orthodox_Church_emblem.png" />
       </Head>
       <div className='container'>
         <main>
-          {isMobile && <Header />}
-          <Hero />
-          {!isMobile && <Header />}
-          <News />
+        <Header />
+          <Molytvy />
         </main>
         <footer>
           <Footer />
@@ -36,4 +28,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Molytovnyk

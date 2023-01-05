@@ -1,17 +1,12 @@
 import type { NextPage } from 'next'
-import { useMediaQuery } from "react-responsive";
 import Head from 'next/head'
 import Header from '../components/header'
 import Clouds from '../components/clouds'
-import Hero from '../components/hero'
-import News from '../components/news'
+import AboutParish from '../components/aboutParish'
+import AboutArchpriest from '../components/aboutArchpriest'
 import Footer from '../components/footer'
 
-
-
-const Home: NextPage = () => {
-
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+const Parish: NextPage = () => {
 
   return (
     <div className='overlay' >
@@ -23,10 +18,9 @@ const Home: NextPage = () => {
       </Head>
       <div className='container'>
         <main>
-          {isMobile && <Header />}
-          <Hero />
-          {!isMobile && <Header />}
-          <News />
+        <Header />
+          <AboutParish />
+          <AboutArchpriest />
         </main>
         <footer>
           <Footer />
@@ -36,4 +30,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Parish
