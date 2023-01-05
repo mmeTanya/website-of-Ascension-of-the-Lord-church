@@ -1,11 +1,13 @@
 .hero {
   margin: 0 auto;
-  height: 83vh;
+  height: 70vh;
   padding: 70px 0 0;
   position: relative;
+  overflow: hidden;
 
   @media screen and (min-width: 768px) {
     padding: 0;
+    height: 83vh;
   }
 
   &__title {
@@ -36,14 +38,15 @@
   }
 
   &__image {
-    object-fit: contain;
-    object-position: top;
+   object-fit: contain;
+    
     transform: scale(1);
     opacity: 0.9;
     animation: animate 3000ms 1;
     z-index: 900;
     position: absolute;
     top: 0;
+    left: 0;
     /*  box-shadow: 8px -6px 16px -2px #8c8c8c; */
   }
 
@@ -60,6 +63,7 @@
 
 @keyframes animate {
   0% {
+  
     transform: scale(2);
     opacity: 0;
 

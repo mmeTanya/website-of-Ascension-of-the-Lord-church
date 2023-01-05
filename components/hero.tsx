@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className={s.hero}>
      <div className={s.hero__image_cover}>
-     <img src="/voznesinnia3.png" alt="God" width='100%' className={s.hero__image} />
+    <img src="/voznesinnia3.png" alt="God" width='100%' className={s.hero__image} />
      </div>
       <div className={s.hero__title}>
       <Fade delay={4000} className={s.hero__text_cover} triggerOnce={true}>

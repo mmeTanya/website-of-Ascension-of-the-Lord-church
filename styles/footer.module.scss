@@ -31,6 +31,7 @@
 }
 
 .container_union {
+
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
@@ -40,6 +41,7 @@
 
 
 .contact_container {
+ 
   @media screen and (max-width: 767px) {
     margin-bottom: 60px;
     text-align: center;
