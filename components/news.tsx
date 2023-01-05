@@ -87,7 +87,7 @@ const News = () => {
           (<li key={uuidv1()} className={s.news_item}>
             {item.title && <h2 className={s.news_item__title}>{item.title}</h2>}
             <div className={s.news_item__img_cover}>
-              {item.image && item.image.map(el => (<img key={uuidv1()} src={el.src} className={s.news_item__img} />))}
+              {item.image && item.image.map(el => (<img key={uuidv1()} src={el.src} alt='image' className={s.news_item__img} />))}
               {item.video && item.video.map(el => (<iframe key={uuidv1()} src={el.src} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className={s.news_item__video}></iframe>))}
             </div>
             {item.text && item.text.map(el => (<p key={uuidv1()} className={s.news_item__text}>{el.p}</p>))}

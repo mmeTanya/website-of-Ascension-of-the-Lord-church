@@ -59,6 +59,7 @@ const  Slide =({ content, offsetRadius, index, animationConfig, moveSlide, delta
           <img
             key={uuidv1()}
             src={content}
+            alt='image'
             onClick={() => moveSlide(offsetFromMiddle)}
             className={s.parish__img}
           />

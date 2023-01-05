@@ -85,7 +85,7 @@ const AboutServices = () => {
           (<li key={uuidv1()} className={s.services_item}>
             {item.title && <h2 className={s.services_item__title}>{item.title}</h2>}
             <div className={s.services_item__img_cover}>
-              {item.image && item.image.map(el => (<img key={uuidv1()} src={el.src} className={s.services_item__img} />))}
+              {item.image && item.image.map(el => (<img key={uuidv1()} src={el.src} alt='image' className={s.services_item__img} />))}
             </div>
             {item.text && item.text.map(el => (<p key={uuidv1()} className={s.services_item__text}>{el.p}</p>))}
             {item.date && <p className={s.services_item__date}>{item.date}</p>}

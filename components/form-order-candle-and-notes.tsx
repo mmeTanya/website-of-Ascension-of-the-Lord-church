@@ -86,7 +86,7 @@ const FormForCandlesNotes = ({ type }) => {
     <form className={s.form_info} onSubmit={handleSubmit} autoComplete="off">
       <div className={s.form_info__form_field}>
         <select name="select" value={select} onChange={handleChange} className='select'>
-          <option  value="alive">за здоров'я</option>
+          <option  value="alive">за здоров`я</option>
           <option value="dead">за упокій</option>
         </select>
       </div>

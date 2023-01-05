@@ -129,7 +129,7 @@ const Form = () => {
     <form className={s.form_info} onSubmit={handleSubmit} autoComplete="off">
       <div className={s.form_info__form_field}>
         <label className={s.form_info__label} htmlFor="name">
-        Ім'я
+        Ім`я
         </label>
         <input
           className={errorsSubmit.name === 'required' || errorsSubmit.name === 'wrong' ? s.form_info__input_red : s.form_info__input}

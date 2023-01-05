@@ -42,7 +42,7 @@ const AboutArchpriest = () => {
         {status === Status.PENDING && <Loader />}
         {status === Status.RESOLVED && <div  >
           {info && info.map(item => <div key={uuidv1()}>
-            {item.image && item.image.map(el => (<img key={uuidv1()} src={el.src} className={s.archpriest__img} />))}
+            {item.image && item.image.map(el => (<img key={uuidv1()} src={el.src} alt='image' className={s.archpriest__img} />))}
           </div>)}
         </div>
         }
