@@ -86,7 +86,7 @@ const Donation = () => {
           (<li key={uuidv1()} className={s.donation_item}>
             {item.title && <h2 className={s.donation_item__title}>{item.title}</h2>}
             <div className={s.donation_item__img_cover}>
-              {item.image && item.image.map(el => (<img key={uuidv1()} src={el.src} className={s.donation_item__img} />))}
+              {item.image && item.image.map(el => (<img key={uuidv1()} src={el.src} alt='image' className={s.donation_item__img} />))}
             </div>
             {item.text && item.text.map(el => (<p key={uuidv1()} className={s.donation_item__text}>{el.p}</p>))}
             {item.link && item.link.map(el => (<a key={uuidv1()} href={el.href} className={s.donation_item__link}>{el.p}</a>))}

@@ -139,7 +139,7 @@ const Form = () => {
           value={name}
           onChange={handleChange}
         />
-        {errorsSubmit.name === 'required' && <p className={s.form_info__error}>Напишіть ім'я</p>}
+        {errorsSubmit.name === 'required' && <p className={s.form_info__error}>Напишіть ім`я</p>}
         {errorsSubmit.name === 'wrong' && <p className={s.form_info__error}>Wrong name</p>}
       </div>
       <div className={s.form_info__form_field}>
