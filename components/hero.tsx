@@ -13,17 +13,17 @@ const Hero = () => {
       <div className={s.hero__title}>
       <Fade delay={4000} className={s.hero__text_cover} triggerOnce={true}>
         <p className={s.hero__text} > 
-        Прийдіть до Мене всi струдженi i обтяженi
+        Прийдіть до Мене всі струдженi і обтяжені
         </p>
       </Fade>
       <Fade delay={5000} className={s.hero__text_cover} triggerOnce={true}>
         <p className={s.hero__text} >  
-        i Я заспокою Вас
+        і Я заспокою Вас
         </p>
       </Fade>
       <Fade delay={6000} className={s.hero__text_cover} triggerOnce={true}>
         <p className={s.hero__text} >  
-        Євангеліє від Матвiя 11,27 : 30
+        Євангеліє від Матвія 11,27 : 30
         </p>
       </Fade>
       </div>
