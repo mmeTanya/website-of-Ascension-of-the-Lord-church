@@ -51,6 +51,10 @@ const News = () => {
 
   const onLoadNext = async () => {
     setShowButton(false)
+    window.scroll({
+      left: 0,
+      behavior: 'smooth'
+    });
     setPage((prevState) => prevState + 1)
     console.log(page)
     try {
@@ -69,10 +73,6 @@ const News = () => {
       } else {
         setShowButton(true)
       }
-      window.scroll({
-        left: 0,
-        behavior: 'smooth'
-      });
     }
     catch {
       setStatus(Status.REJECTED)
