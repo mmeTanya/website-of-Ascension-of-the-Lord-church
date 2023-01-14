@@ -11,7 +11,7 @@ import GoUp from '../components/goUp'
 
 const Home: NextPage = () => {
 
-  const isNotMobile = useMediaQuery({ query: "(min-width: 768px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   return (
     <div className='overlay' >
@@ -23,9 +23,9 @@ const Home: NextPage = () => {
       </Head>
       <div className='container'>
         <main>
-          {!isNotMobile && <Header />}
+          {isMobile && <Header />}
           <Hero />
-          {isNotMobile && <Header />}
+          {!isMobile && <Header />}
           <News />
         </main>
         <footer>
