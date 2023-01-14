@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ButtonCircle from "../components/button-circle";
-import s from "../styles/clouds.module.scss";
 
 
-const goUp = () => {
+const GoUp = () => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -33,4 +32,4 @@ const goUp = () => {
   );
 };
 
-export default goUp;
+export default GoUp;
