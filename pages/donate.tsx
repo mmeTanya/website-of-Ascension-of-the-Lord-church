@@ -4,6 +4,8 @@ import Header from '../components/header'
 import Clouds from '../components/clouds'
 import Donation from '../components/donation'
 import Footer from '../components/footer'
+import GoUp from '../components/goUp'
+
 
 const Donate: NextPage = () => {
 
@@ -24,6 +26,7 @@ const Donate: NextPage = () => {
           <Footer />
         </footer>
       </div>
+      <GoUp />
     </div>
   )
 }

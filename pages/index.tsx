@@ -6,12 +6,12 @@ import Clouds from '../components/clouds'
 import Hero from '../components/hero'
 import News from '../components/news'
 import Footer from '../components/footer'
-
+import GoUp from '../components/goUp'
 
 
 const Home: NextPage = () => {
 
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isNotMobile = useMediaQuery({ query: "(min-width: 768px)" });
 
   return (
     <div className='overlay' >
@@ -23,15 +23,16 @@ const Home: NextPage = () => {
       </Head>
       <div className='container'>
         <main>
-          {isMobile && <Header />}
+          {!isNotMobile && <Header />}
           <Hero />
-          {!isMobile && <Header />}
+          {isNotMobile && <Header />}
           <News />
         </main>
         <footer>
           <Footer />
         </footer>
       </div>
+      <GoUp />
     </div>
   )
 }

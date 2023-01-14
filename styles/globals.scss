@@ -43,15 +43,20 @@ address {
   flex-direction: column;
   align-items: center;
   width: 100vw;
+  height: 100vh;
 }
 
 .container {
-  z-index: 900;
+  z-index: 2;
   position: absolute;
   top: 0;
   margin: 0 auto;
   min-width: 320px;
 
+}
+
+.goUp {
+  z-index: 3;
 }
 
 body::-webkit-scrollbar {

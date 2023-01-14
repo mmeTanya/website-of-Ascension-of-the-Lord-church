@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/header'
 import Clouds from '../components/clouds'
+import GoUp from '../components/goUp'
 import AboutParish from '../components/aboutParish'
 import AboutArchpriest from '../components/aboutArchpriest'
 import Footer from '../components/footer'
@@ -26,6 +27,7 @@ const Parish: NextPage = () => {
           <Footer />
         </footer>
       </div>
+      <GoUp />
     </div>
   )
 }

@@ -4,6 +4,8 @@ import Header from '../components/header'
 import Clouds from '../components/clouds'
 import AboutSermons from '../components/aboutSermons'
 import Footer from '../components/footer'
+import GoUp from '../components/goUp'
+
 
 const Sermons: NextPage = () => {
 
@@ -24,6 +26,7 @@ const Sermons: NextPage = () => {
           <Footer />
         </footer>
       </div>
+      <GoUp />
     </div>
   )
 }

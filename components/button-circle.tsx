@@ -9,6 +9,9 @@ const getStyledButton = (theme: any) => {
     case 'menu':
       className = s.menu
       return
+      case 'goToTop':
+      className = s.goToTop
+      return
     default:
       return {};
   }

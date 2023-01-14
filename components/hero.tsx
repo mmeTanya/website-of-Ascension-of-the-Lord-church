@@ -13,7 +13,7 @@ const Hero = () => {
       <div className={s.hero__title}>
       <Fade delay={4000} className={s.hero__text_cover} triggerOnce={true}>
         <p className={s.hero__text} > 
-        Прийдіть до Мене всі струдженi і обтяжені
+        Прийдіть до Мене всі струджені і обтяжені
         </p>
       </Fade>
       <Fade delay={5000} className={s.hero__text_cover} triggerOnce={true}>

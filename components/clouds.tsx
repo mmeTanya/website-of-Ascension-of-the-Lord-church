@@ -1,7 +1,6 @@
 import s from "../styles/clouds.module.scss";
 
 const Clouds = () => {
-
   return (
     <div className={s.sky}>
         <div className={s.cloud_1}>

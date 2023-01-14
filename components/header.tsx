@@ -4,11 +4,11 @@ import { useMediaQuery } from "react-responsive";
 import s from "../styles/header.module.scss";
 
 const Header = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isNotMobile = useMediaQuery({ query: "(min-width: 768px)" });
 
   return (
     <header className={s.page_header}>
-      {isMobile ? <MobileNav /> : <Nav />}
+      {isNotMobile ? <Nav /> : <MobileNav />}
     </header>
   );
 };

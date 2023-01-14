@@ -4,6 +4,8 @@ import Header from '../components/header'
 import Clouds from '../components/clouds'
 import Molytvy from '../components/molytvy'
 import Footer from '../components/footer'
+import GoUp from '../components/goUp'
+
 
 const Molytovnyk: NextPage = () => {
 
@@ -24,6 +26,7 @@ const Molytovnyk: NextPage = () => {
           <Footer />
         </footer>
       </div>
+      <GoUp />
     </div>
   )
 }

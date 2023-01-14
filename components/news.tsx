@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { v1 as uuidv1 } from 'uuid';
+import { animateScroll as scroll } from 'react-scroll';
 import Welcome from '../components/welcome'
 import Loader from '../components/loader'
 import s from "../styles/news.module.scss";
@@ -24,6 +25,8 @@ const News = () => {
   }, []);
 
   const onLoadNews = async () => {
+
+    
     try {
       const response = await fetch('/api/news')
       setStatus(Status.PENDING)
@@ -66,6 +69,10 @@ const News = () => {
       } else {
         setShowButton(true)
       }
+      window.scroll({
+        left: 0,
+        behavior: 'smooth'
+      });
     }
     catch {
       setStatus(Status.REJECTED)

@@ -21,7 +21,7 @@
 
 .news_item {
   width: 95%;
-  max-height: 700px;
+  max-height: 900px;
   margin: 0 auto 50px;
   padding: 50px;
   box-shadow: 8px -6px 16px -2px #8c8c8c;
@@ -76,10 +76,19 @@
   }
 
   &__video {
-    width: 90%;
+    width: 700px;
+    height: 370px;
     margin: 25px;
 
     @media screen and (max-width: 768px) {
+      width: 350px;
+      height: 200px;
+      margin: 10px;
+    }
+
+    @media screen and (max-width: 400px) {
+      width: 250px;
+      height: 150px;
       margin: 10px;
     }
   }

@@ -4,6 +4,8 @@ import Header from '../components/header'
 import Clouds from '../components/clouds'
 import OnlineService from '../components/onlineServices'
 import Footer from '../components/footer'
+import GoUp from '../components/goUp'
+
 
 const OnlineServices: NextPage = () => {
 
@@ -24,6 +26,7 @@ const OnlineServices: NextPage = () => {
           <Footer />
         </footer>
       </div>
+      <GoUp />
     </div>
   )
 }

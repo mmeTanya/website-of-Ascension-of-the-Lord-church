@@ -86,13 +86,6 @@
     background-image:
       url("../public/facebook.svg");
   }
-
-  &__telegram {
-    @extend %link;
-    background-image:
-      url("../public/telegram.svg");
-    margin-right: 20px;
-  }
 }
 
 

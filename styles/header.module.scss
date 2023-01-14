@@ -16,8 +16,6 @@
 }
 
 .container {
-  display: flex;
-  align-items: center;
   margin: 0 auto;
   padding: 0 30px;
   min-width: 320px;
@@ -25,13 +23,12 @@
 }
 
 .nav {
-  display: flex;
-  align-items: center;
 
   &__list {
     display: flex;
     align-items: center;
-  }
+    justify-content: space-around;
+    }
 
   &__item {
     text-align: center;
