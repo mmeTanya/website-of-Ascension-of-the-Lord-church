@@ -3,8 +3,7 @@
   min-height: 800px;
   margin: 90px auto;
   padding: 50px 30px;
-  background-color: #abb3ba;
-  box-shadow: 8px -6px 16px -2px #8c8c8c;
+  background-color: transparent;
 
   @media screen and (min-width: 768px) {
     margin: 20px auto;
@@ -17,9 +16,10 @@
 }
 
 .molytvy_item {
-  width: 95%;
+  width: 100%;
   margin: 0 auto 50px;
   padding: 50px;
+  background-color: #abb3ba;
   box-shadow: 8px -6px 16px -2px #8c8c8c;
 
   @media screen and (max-width: 768px) {

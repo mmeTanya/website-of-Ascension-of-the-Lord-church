@@ -3,8 +3,7 @@
   margin: 90px auto;
   min-height: 700px;
   padding: 50px 30px;
-  background-color: #abb3ba;
-  box-shadow: 8px -6px 16px -2px #8c8c8c;
+  background-color: transparent;
 
   @media screen and (min-width: 768px) {
     margin: 20px auto;
@@ -17,16 +16,17 @@
 }
 
 .sermons_item {
-  width: 95%;
-  max-height: 700px;
+  width: 100%;
+  max-height: 1100px;
   margin: 0 auto 50px;
   padding: 50px;
+  background-color: #abb3ba;
   box-shadow: 8px -6px 16px -2px #8c8c8c;
   overflow-y: scroll;
 
   @media screen and (max-width: 768px) {
     padding: 20px 10px;
-    max-height: 450px;
+    max-height: 500px;
   }
 
   &__title {
