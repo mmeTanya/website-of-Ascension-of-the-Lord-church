@@ -1,7 +1,6 @@
 .news {
   width: 90vw;
   margin: 10px auto;
-  padding: 50px 30px;
   background-color: transparent;
   
   &__title {
@@ -30,7 +29,7 @@
 
   @media screen and (max-width: 768px) {
     padding: 20px 10px;
-    max-height: 500px;
+    max-height: 550px;
   }
 
   &__title {

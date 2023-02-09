@@ -1,4 +1,4 @@
-import { BallTriangle } from 'react-loader-spinner';
+import { RotatingLines } from 'react-loader-spinner';
 
 const Loader = () => {
   const styles = {
@@ -8,7 +8,7 @@ const Loader = () => {
 
   return (
     <div style={styles.div}>
-      <BallTriangle color="#00BFFF" height={80} width={80} />
+      <RotatingLines strokeColor="grey"  width="30" />
     </div>
   );
 };
