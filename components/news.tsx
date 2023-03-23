@@ -32,7 +32,6 @@ const News = () => {
       const response = await fetch('/api/news')
       setStatus(Status.PENDING)
       const result = await response.json()
-      console.log(result)
       if (result.news.length === 0) {
         return
       }
@@ -55,7 +54,6 @@ const News = () => {
       behavior: 'smooth'
     });
     setPage((prevState) => prevState + 1)
-    console.log(page)
     try {
       const response = await fetch('/api/news')
       setStatus(Status.PENDING)
