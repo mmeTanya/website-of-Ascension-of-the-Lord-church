@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Link from "next/link";
 import { v1 as uuidv1 } from 'uuid';
-import { animateScroll as scroll } from 'react-scroll';
 import Welcome from '../components/welcome'
 import Loader from '../components/loader'
 import s from "../styles/news.module.scss";
@@ -14,6 +14,7 @@ const Status = {
 };
 
 const News = () => {
+
   const [news, setNews] = useState([])
   const [page, setPage] = useState(2)
   const [status, setStatus] = useState(Status.IDLE);
@@ -26,7 +27,7 @@ const News = () => {
 
   const onLoadNews = async () => {
 
-    
+
     try {
       const response = await fetch('/api/news')
       setStatus(Status.PENDING)
@@ -92,14 +93,19 @@ const News = () => {
         <ul>
           {news && news.map(item =>
           (<li key={uuidv1()} className={s.news_item}>
-            {item.title && <h2 className={s.news_item__title}>{item.title}</h2>}
-            <div className={s.news_item__img_cover}>
-              {item.image && item.image.map(el => (<img key={uuidv1()} src={el.src} alt='image' className={s.news_item__img} />))}
-              {item.video && item.video.map(el => (<iframe key={uuidv1()} src={el.src} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className={s.news_item__video}></iframe>))}
+            <div className={s.news_item__cover}>
+              {item.title && <h2 className={s.news_item__title}>{item.title}</h2>}
+              <div className={s.news_item__img_cover}>
+                {item.image && item.image.map(el => (<img key={uuidv1()} src={el.src} alt='image' className={s.news_item__img} />))}
+                {item.video && item.video.map(el => (<iframe key={uuidv1()} src={el.src} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className={s.news_item__video}></iframe>))}
+              </div>
+              {item.text && item.text.map(el => (<p key={uuidv1()} className={s.news_item__text}>{el.p}</p>))}
+              {item.link && item.link.map(el => (<a key={uuidv1()} href={el.href} className={s.news_item__link}>{el.p}</a>))}
+              {item.date && <p className={s.news_item__date}>{item.date}</p>}
             </div>
-            {item.text && item.text.map(el => (<p key={uuidv1()} className={s.news_item__text}>{el.p}</p>))}
-            {item.link && item.link.map(el => (<a key={uuidv1()} href={el.href} className={s.donation_item__link}>{el.p}</a>))}
-            {item.date && <p className={s.news_item__date}>{item.date}</p>}
+            <Link legacyBehavior href={`/news/${item._id}`}>
+              <a id="link" className={s.news_item__link} > Показати повний текст </a>
+            </Link>
           </li>)
           )}
         </ul>
