@@ -38,12 +38,10 @@ const News = () => {
       }
       const firstPage = result.news.slice(0, 7)
       setNews(firstPage)
-      console.log(news)
       setStatus(Status.RESOLVED)
       if (result.news.length > 7) {
         setShowButton(true)
       }
-      console.log(page)
     }
     catch {
       setStatus(Status.REJECTED)
