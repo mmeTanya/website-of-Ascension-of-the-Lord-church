@@ -34,12 +34,10 @@ const Donation = () => {
       }
       const firstPage = result.donation.slice(0, 7)
       setDonation(firstPage)
-      console.log(donation)
       setStatus(Status.RESOLVED)
       if (result.donation.length > 7) {
         setShowButton(true)
       }
-      console.log(page)
     }
     catch {
       setStatus(Status.REJECTED)
@@ -49,7 +47,6 @@ const Donation = () => {
   const onLoadNext = async () => {
     setShowButton(false)
     setPage((prevState) => prevState + 1)
-    console.log(page)
     try {
       const response = await fetch('/api/donation')
       setStatus(Status.PENDING)
@@ -59,7 +56,6 @@ const Donation = () => {
       }
       const nextPage = result.donation.slice(7 * page - 7, 7 * page)
       setDonation([...donation, ...nextPage])
-      console.log(donation)
       setStatus(Status.RESOLVED)
       if (page >= Math.ceil(result.donation.length / 7)) {
         setShowButton(false);
