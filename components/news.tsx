@@ -63,7 +63,6 @@ const News = () => {
       }
       const nextPage = result.news.slice(7 * page - 7, 7 * page)
       setNews([...news, ...nextPage])
-      console.log(news)
       setStatus(Status.RESOLVED)
       if (page >= Math.ceil(result.news.length / 7)) {
         setShowButton(false);
@@ -80,7 +79,6 @@ const News = () => {
   return (
     <section className={s.news} >
       <Welcome />
-
       <h2 className={s.news__title}>
         Новини
       </h2>
