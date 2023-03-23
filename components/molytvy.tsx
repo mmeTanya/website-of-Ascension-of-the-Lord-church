@@ -32,12 +32,10 @@ const Molytvy = () => {
       }
       const firstPage = result.molytvy.slice(0, 7)
       setMolytvy(firstPage)
-      console.log(molytvy)
       setStatus(Status.RESOLVED)
       if (result.molytvy.length > 7) {
         setShowButton(true)
       }
-      console.log(page)
     }
     catch {
       setStatus(Status.REJECTED)
@@ -47,7 +45,6 @@ const Molytvy = () => {
   const onLoadNext = async () => {
     setShowButton(false)
     setPage((prevState) => prevState + 1)
-    console.log(page)
     try {
       const response = await fetch('/api/molytovnyk')
       setStatus(Status.PENDING)
@@ -57,7 +54,6 @@ const Molytvy = () => {
       }
       const nextPage = result.molytvy.slice(7 * page - 7, 7 * page)
       setMolytvy([...molytvy, ...nextPage])
-      console.log(molytvy)
       setStatus(Status.RESOLVED)
       if (page >= Math.ceil(result.molytvy.length / 7)) {
         setShowButton(false);
