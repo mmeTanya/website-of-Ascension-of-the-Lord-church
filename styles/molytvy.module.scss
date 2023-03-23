@@ -87,6 +87,9 @@
     color: black;
     margin-bottom: 20px;
 
+    @media screen and (max-width: 1200px) {
+      font-size: 15px;
+    }
 
     @media screen and (max-width: 768px) {
       font-size: 14px;
