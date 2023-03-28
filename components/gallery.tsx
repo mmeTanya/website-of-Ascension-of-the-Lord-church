@@ -10,9 +10,7 @@ const mod = (a, b) => {
 const VerticalCarousel = ({slides, offsetRadius, showNavigation, animationConfig}) => {
 
   const [index, setIndex] = useState(0)
-  const [goToSlide, setGoToSlide] = useState(null)
-  const [prevPropsGoToSlide, setPrevPropsGoToSlide] = useState(0);
-  const [newSlide, setNewSlide] = useState(false)
+ 
 
   useEffect(() => {
     document.addEventListener("keydown", event => {
@@ -36,7 +34,6 @@ const VerticalCarousel = ({slides, offsetRadius, showNavigation, animationConfig
 
   const moveSlide = direction => {
     setIndex(modBySlidesLength(index + direction))
-    setGoToSlide(null)
   };
 
   const clampOffsetRadius = (offsetRadius) => {

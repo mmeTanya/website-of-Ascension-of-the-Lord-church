@@ -13,13 +13,13 @@ const Parish: NextPage = () => {
     <div className='overlay' >
       <Clouds />
       <Head>
-      <title>Свято-Вознесенська парафія</title>
+        <title>Свято-Вознесенська парафія</title>
         <meta name="description" content="Свято-Вознесенська парафія, Українська православна церква Київського Патріархату" />
         <link rel="icon" href="/Ukrainian_Orthodox_Church_emblem.png" />
       </Head>
       <div className='container'>
         <main>
-        <Header />
+          <Header />
           <AboutParish />
           <AboutArchpriest />
         </main>

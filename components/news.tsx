@@ -23,10 +23,11 @@ const News = () => {
 
   useEffect(() => {
     onLoadNews()
+
   }, []);
 
-  const onLoadNews = async () => {
 
+  const onLoadNews = async () => {
 
     try {
       const response = await fetch('/api/news')

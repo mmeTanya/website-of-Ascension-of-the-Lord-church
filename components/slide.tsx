@@ -10,10 +10,6 @@ const  Slide =({ content, offsetRadius, index, animationConfig, moveSlide, delta
   const totalPresentables = 2 * offsetRadius + 1;
   const distanceFactor = 1 - Math.abs(offsetFromMiddle / (offsetRadius + 1));
 
-  const offsetCardClick = i => {
-    console.log(i);
-  };
-
   const translateYoffset =
     50 * (Math.abs(offsetFromMiddle) / (offsetRadius + 1));
   let translateY = -50;

@@ -25,13 +25,13 @@ const MobileNav = () => {
   };
 
   return (
-    <div className={s.container}>
+    <div className={s.mobile_header}>
       {isClose &&
-        <div className={s.style}>
+        <div className={s.mobile_header__container}>
           <ButtonCircle theme={'menu'} type={'button'} onClick={MenuOpen} />
         </div>
       }
-      <div className={isClose ? s.isClose : s.menu_container}>
+      <div className={isClose ? s.mobile_header__isClose : s.mobile_header__menu_container}>
         <div className={s.mobile_menu}>
           <ButtonCircle theme={'close'} type={'button'} onClick={MenuOpen} />
           <ul className={s.mobile_menu__list}>

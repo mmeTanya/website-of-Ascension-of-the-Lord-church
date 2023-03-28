@@ -40,11 +40,11 @@ const AboutArchpriest = () => {
     <section className={s.archpriest} >
       <div className={s.archpriest__img_cover}>
         {status === Status.PENDING && <Loader />}
-        {status === Status.RESOLVED && <div  >
+        {status === Status.RESOLVED && <article  >
           {info && info.map(item => <div key={uuidv1()}>
             {item.image && item.image.map(el => (<img key={uuidv1()} src={el.src} alt='image' className={s.archpriest__img} />))}
           </div>)}
-        </div>
+        </article>
         }
       </div>
       <div className={s.archpriest__text_cover}>

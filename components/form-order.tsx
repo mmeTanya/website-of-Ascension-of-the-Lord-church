@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { toast } from 'react-toastify';
 import Button from "../components/button";
 import s from "../styles/form-order.module.scss";
 
@@ -9,6 +8,7 @@ const Form = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [comments, setComments] = useState('');
+  const [answer, setAnswer] = useState('');
   const [errorsSubmit, setErrorsSubmit] = useState({
     name: '',
     email: '',
@@ -43,10 +43,13 @@ const Form = () => {
   const regexPhone = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
 
   const reset = () => {
-    setName('');
-    setEmail('');
-    setPhone('');
-    setComments('');
+    setTimeout(() => {
+      setName('');
+      setEmail('');
+      setPhone('');
+      setComments('');
+      setAnswer('');
+    }, 2000);
   };
 
   const handleSubmit = async (e) => {
@@ -58,7 +61,6 @@ const Form = () => {
       phone: phone,
       comments: comments,
       date: new Date()
-
     }
 
     if (name === '') {
@@ -119,9 +121,8 @@ const Form = () => {
       mode: 'cors'
     })
     const result = await response.json()
+    setAnswer('Запит прийнято');
     reset()
-    toast('Thank you !');
-
   }
 
 
@@ -190,6 +191,7 @@ const Form = () => {
       <div className={s.form_info__button}>
         <Button theme={'no_animate'} type={'submit'} text={'Надіслати'} />
       </div>
+      <p className={s.form_info__answer}>{answer}</p>
     </form>
   );
 };

@@ -16,7 +16,6 @@ const Nav = () => {
   const router = useRouter();
 
   return (
-    <div className={s.container}>
       <nav className={s.nav}>
         <ul className={s.nav__list}>
           {NavLinks.map((NavLink) => (
@@ -37,7 +36,7 @@ const Nav = () => {
         </ul>
       </nav>
 
-    </div>
+   
   );
 };
 

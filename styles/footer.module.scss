@@ -3,7 +3,7 @@
   padding: 30px 50px;
   width: 100vw;
   text-align: center;
-
+ 
   &__title {
     color: rgba(255, 255, 255, 0.6);
     font-family: Playfair Display;
@@ -41,9 +41,9 @@
 
 
 .contact_container {
- 
+
   @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     text-align: center;
   }
 }

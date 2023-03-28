@@ -61,7 +61,7 @@ const AboutParish = () => {
       <div className={s.parish__img_cover}>
         {status === Status.PENDING && <Loader />}
         {status === Status.REJECTED && <p className={s.parish__text}>На даний час інформація відсутня</p>}
-        {status === Status.RESOLVED && <div  >
+        {status === Status.RESOLVED && <article  >
           {info && info.map(item => <div key={uuidv1()} className={s.parish__wrapper_container} >
               <VerticalCarousel
                 key={uuidv1()}
@@ -71,7 +71,7 @@ const AboutParish = () => {
                 animationConfig={confiG}
               />
           </div>)}
-        </div>
+        </article>
         }
       </div>
     </section>

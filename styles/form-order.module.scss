@@ -6,7 +6,7 @@
   overflow-x: hidden ;
   
   @media screen and (max-width: 768px) {
-    padding: 30px 10px;
+    padding: 50px 10px;
   }
 
   &__form_field {
@@ -126,7 +126,7 @@
   &__input:focus,
   &__comments:hover,
   &__comments:focus {
-    border: 2px solid #E59560;
+    border: 2px solid ;
   }
 
   &__error {
@@ -142,8 +142,19 @@
    
   }
 
+  &__answer {
+    margin-top: 10px;
+    color: blue;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    text-align: center;
+
+    display: block;
+   
+  }
+
   &__button {
     text-align: center;
-    margin: 50px 0  0;
   }
 }
