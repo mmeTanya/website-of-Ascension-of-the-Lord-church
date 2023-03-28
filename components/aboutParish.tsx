@@ -47,7 +47,7 @@ const AboutParish = () => {
     <section className={s.parish} >
       <div className={s.parish__text_cover}>
         <h1 className={s.parish__title}>
-        Свято-Вознесенська парафія, Українська православна церква Київського Патріархату
+          Свято-Вознесенська парафія, Українська православна церква Київського Патріархату
         </h1>
         {status === Status.PENDING && <Loader />}
         {status === Status.REJECTED && <p className={s.parish__text}>На даний час інформація відсутня</p>}
@@ -63,13 +63,13 @@ const AboutParish = () => {
         {status === Status.REJECTED && <p className={s.parish__text}>На даний час інформація відсутня</p>}
         {status === Status.RESOLVED && <article  >
           {info && info.map(item => <div key={uuidv1()} className={s.parish__wrapper_container} >
-              <VerticalCarousel
-                key={uuidv1()}
-                slides={item.image}
-                offsetRadius={offsetRadius}
-                showNavigation={showNavigation}
-                animationConfig={confiG}
-              />
+            <VerticalCarousel
+              key={uuidv1()}
+              slides={item.image}
+              offsetRadius={offsetRadius}
+              showNavigation={showNavigation}
+              animationConfig={confiG}
+            />
           </div>)}
         </article>
         }

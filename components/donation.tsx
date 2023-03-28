@@ -72,7 +72,7 @@ const Donation = () => {
   return (
     <section className={s.donation} >
       <h1 className={s.donation__title}>
-      Donation
+        Donation
       </h1>
       {status === Status.PENDING && <Loader />}
       {status === Status.REJECTED && <p className={s.donation_item__text}>На даний час інформація відсутня</p>}

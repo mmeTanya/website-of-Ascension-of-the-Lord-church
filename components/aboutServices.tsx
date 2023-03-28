@@ -27,7 +27,7 @@ const AboutServices = () => {
       const response = await fetch('/api/info-services')
       setStatus(Status.PENDING)
       const result = await response.json()
-      if (result.services.length === 0){
+      if (result.services.length === 0) {
         setStatus(Status.REJECTED)
         return
       }
@@ -53,7 +53,7 @@ const AboutServices = () => {
       const response = await fetch('/api/info-services')
       setStatus(Status.PENDING)
       const result = await response.json()
-      if (result.services.length === 0){
+      if (result.services.length === 0) {
         return
       }
       const nextPage = result.services.slice(7 * page - 7, 7 * page)
@@ -75,7 +75,7 @@ const AboutServices = () => {
   return (
     <section className={s.services} >
       <h2 className={s.services__title}>
-      Services
+        Services
       </h2>
       {status === Status.PENDING && <Loader />}
       {status === Status.REJECTED && <p className={s.services_item__text}>На даний час інформація відсутня</p>}

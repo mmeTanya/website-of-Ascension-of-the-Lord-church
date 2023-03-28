@@ -49,7 +49,7 @@ const AboutArchpriest = () => {
       </div>
       <div className={s.archpriest__text_cover}>
         <h1 className={s.archpriest__title}>
-        Протоієрей Сергій Більченко
+          Протоієрей Сергій Більченко
         </h1>
         {status === Status.PENDING && <Loader />}
         {status === Status.REJECTED && <p className={s.archpriest__text}>На даний час інформація відсутня</p>}

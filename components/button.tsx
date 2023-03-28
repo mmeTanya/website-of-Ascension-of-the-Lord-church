@@ -12,7 +12,7 @@ const getStyledButton = theme => {
     case 'active':
       className = s.active
       return
-      case 'active_animate':
+    case 'active_animate':
       className = s.active_animate
       return
     default:

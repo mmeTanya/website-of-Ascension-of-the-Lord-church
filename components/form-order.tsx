@@ -130,7 +130,7 @@ const Form = () => {
     <form className={s.form_info} onSubmit={handleSubmit} autoComplete="off">
       <div className={s.form_info__form_field}>
         <label className={s.form_info__label} htmlFor="name">
-        Ім`я
+          Ім`я
         </label>
         <input
           className={errorsSubmit.name === 'required' || errorsSubmit.name === 'wrong' ? s.form_info__input_red : s.form_info__input}
@@ -145,7 +145,7 @@ const Form = () => {
       </div>
       <div className={s.form_info__form_field}>
         <label className={s.form_info__label} htmlFor="tel">
-        Телефон
+          Телефон
         </label>
         <input
           className={errorsSubmit.phone === 'required' || errorsSubmit.phone === 'wrong' ? s.form_info__input_red : s.form_info__input}
@@ -160,7 +160,7 @@ const Form = () => {
       </div>
       <div className={s.form_info__form_field}>
         <label className={s.form_info__label} htmlFor="email">
-        Електронна пошта
+          Електронна пошта
         </label>
         <input
           className={errorsSubmit.email === 'required' || errorsSubmit.email === 'wrong' ? s.form_info__input_red : s.form_info__input}
@@ -175,7 +175,7 @@ const Form = () => {
       </div>
       <div className={s.form_info__form_field}>
         <label className={s.form_info__label} htmlFor="comments">
-        Текст
+          Текст
         </label>
         <textarea
           className={errorsSubmit.comments === 'required' || errorsSubmit.comments === 'wrong' ? s.form_info__comments_red : s.form_info__comments}

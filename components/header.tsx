@@ -5,11 +5,11 @@ import { useMediaQuery } from "react-responsive";
 import s from "../styles/header.module.scss";
 
 const Header = () => {
- 
+
   return (
     <header className={s.page_header}>
       <Nav />
-     <MobileNav />
+      <MobileNav />
     </header>
   );
 };

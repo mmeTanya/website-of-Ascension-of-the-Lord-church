@@ -5,7 +5,7 @@ import { v1 as uuidv1 } from 'uuid';
 import s from "../styles/aboutParish.module.scss";
 
 
-const  Slide =({ content, offsetRadius, index, animationConfig, moveSlide, delta, down }) => {
+const Slide = ({ content, offsetRadius, index, animationConfig, moveSlide, delta, down }) => {
   const offsetFromMiddle = index - offsetRadius;
   const totalPresentables = 2 * offsetRadius + 1;
   const distanceFactor = 1 - Math.abs(offsetFromMiddle / (offsetRadius + 1));

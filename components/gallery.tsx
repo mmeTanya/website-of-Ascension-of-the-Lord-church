@@ -7,10 +7,10 @@ const mod = (a, b) => {
   return ((a % b) + b) % b;
 }
 
-const VerticalCarousel = ({slides, offsetRadius, showNavigation, animationConfig}) => {
+const VerticalCarousel = ({ slides, offsetRadius, showNavigation, animationConfig }) => {
 
   const [index, setIndex] = useState(0)
- 
+
 
   useEffect(() => {
     document.addEventListener("keydown", event => {
@@ -25,7 +25,7 @@ const VerticalCarousel = ({slides, offsetRadius, showNavigation, animationConfig
       }
     });
   }, []);
- 
+
 
 
   const modBySlidesLength = index => {
@@ -60,30 +60,30 @@ const VerticalCarousel = ({slides, offsetRadius, showNavigation, animationConfig
     return presentableSlides;
   }
 
-    return (
-      <div>
-        <div className={s.parish__wrapper}>
+  return (
+    <div>
+      <div className={s.parish__wrapper}>
 
-          {getPresentableSlides().map((slide, presentableIndex) => (
-            <Slide
-              key={uuidv1()}
-              content={slide.src}
-              moveSlide={moveSlide}
-              offsetRadius={clampOffsetRadius(offsetRadius)}
-              index={presentableIndex}
-              animationConfig={animationConfig}
-            />
-          ))}
+        {getPresentableSlides().map((slide, presentableIndex) => (
+          <Slide
+            key={uuidv1()}
+            content={slide.src}
+            moveSlide={moveSlide}
+            offsetRadius={clampOffsetRadius(offsetRadius)}
+            index={presentableIndex}
+            animationConfig={animationConfig}
+          />
+        ))}
 
-        </div>
-        {
-          showNavigation && <div className={s.parish__navigationButtons}>
-            <div onClick={() => moveSlide(1)} className={s.parish__navBtn}>&#8593;</div>
-            <div onClick={() => moveSlide(-1)} className={s.parish__navBtn}>&#8595;</div>
-          </div>
-        }
       </div>
-    );
+      {
+        showNavigation && <div className={s.parish__navigationButtons}>
+          <div onClick={() => moveSlide(1)} className={s.parish__navBtn}>&#8593;</div>
+          <div onClick={() => moveSlide(-1)} className={s.parish__navBtn}>&#8595;</div>
+        </div>
+      }
+    </div>
+  );
 }
 
 export default VerticalCarousel;
